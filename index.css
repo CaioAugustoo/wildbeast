@@ -12,6 +12,10 @@ body {
   font-family: "Volkorn", Georgia, serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -31,8 +35,42 @@ a {
     "footer footer footer";
 }
 
+/* Header */
+
 header {
   grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  padding: 10px;
+  color: white;
+  font-size: 1.125rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+header nav a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a + a {
+  margin-left: 30px;
+}
+
+.logo {
+  max-width: 200px;
 }
 
 #sidenav {
