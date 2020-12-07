@@ -38,6 +38,28 @@ a {
     "footer footer footer";
 }
 
+@media (max-width: 1200px) {
+  .estrutura {
+    grid-template-areas:
+      "header header header"
+      "sidenav content content"
+      "sidenav ads ads"
+      "footer footer footer";
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "ads"
+      "footer";
+  }
+}
+
 /* Header */
 
 header {
@@ -70,6 +92,24 @@ header nav a:hover {
 
 header nav ul li a + a {
   margin-left: 30px;
+}
+
+@media (max-width: 760px) {
+  header {
+    grid-template-columns: auto;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  header nav a {
+    font-size: 1rem;
+  }
+
+  header nav ul li a + a {
+    margin-left: 10px;
+  }
 }
 
 .logo {
